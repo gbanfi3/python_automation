@@ -8,3 +8,10 @@ print(f"átlag= {sum1/hany}")
 sum2 = sum(grades)
 print(f"átlag= {sum2/hany}")
 
+doubled = []
+for i in range(len(grades)):
+    doubled.append(grades[i]*2)
+print(doubled)
+
+doubled = [2*x for x in grades]
+print(doubled)
