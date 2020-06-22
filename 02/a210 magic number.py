@@ -2,7 +2,7 @@ import random, sys
 
 magic_number = random.randint(1,9)
 print(f"magic_number: {magic_number}")
-if input("akarsz játszani? (y/bármi más): ").lower() != "y":
+if input("ha nem akarsz játszani, írd N: ") in "ennek":
     print("nem akarsz játszani")
     sys.exit(1)
 else:
