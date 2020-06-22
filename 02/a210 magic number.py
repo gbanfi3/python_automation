@@ -1,7 +1,9 @@
 import random, sys
 
 magic_number = random.randint(1,9)
-if input("akarsz játszani? (yes/bármi más): ").lower() != yes:
+print(f"magic_number: {magic_number}")
+if input("akarsz játszani? (y/bármi más): ").lower() != "y":
+    print("nem akarsz játszani")
     sys.exit(1)
 else:
     print("ha ki akarsz szállni, írj valami nem számot")
@@ -10,11 +12,14 @@ else:
         try:
             c_num = int(c)
         except:
-            print("kilépek")
+            print("nem számot adtál, ezért kilépek")
             sys.exit(1)
         if c_num == magic_number:
             print(f"eltaláltad: {magic_number}")
-        if abs(c_num,magic_number) == 1:
+            sys.exit(0)
+        elif abs(c_num-magic_number) == 1:
             print("távolság: 1")
-        print("nem találtad el")
+        else:
+            print("nem találtad el, ", end='')
+
 
