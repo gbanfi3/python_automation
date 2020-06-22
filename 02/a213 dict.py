@@ -5,3 +5,8 @@ for i in student_att:
 
 for nev, magas in student_att.items():
     print(f"{nev}: {magas}")
+
+att_values = student_att.values()
+print(att_values)
+atlag = sum(att_values) / len(att_values)
+print(f"{atlag:.2f}")
