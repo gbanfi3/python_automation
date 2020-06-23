@@ -15,3 +15,8 @@ def printnicely(**alma):
     for a,b in alma.items():
         print(f"{a}: {b}")
 printnicely(**valami)
+
+def mas(*ar, **ar2):
+    print(ar)
+    print(ar2)
+mas(0,1,2,3, alma=3, korte=4)
