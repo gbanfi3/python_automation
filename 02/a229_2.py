@@ -4,3 +4,5 @@ def divide(dividend, divisor):
 
 
 print("a229_2.py: ", __name__)
+
+import lib229.mylib
