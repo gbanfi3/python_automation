@@ -19,12 +19,21 @@ class Printer(Device):
 
     def __str__(self):
         return f"{super().__str__()}, remaining pages = {self.remaining_pages}"
-        # return f"printer vagyok, nevem {self.name}, conn {self.connected_by}, capacity {self.capacity}"
+
+    def print(self, lapok):
+        if not self.connected:
+            print(f"akartál nyomtatni {lapok} oldalt, de nincs bekapcsolva {self.name}")
+        else:
+            self.remaining_pages -= lapok
+            print(f"{lapok} oldal nyomtatva, {self.remaining_pages} oldal maradt")
 
 printer = Device("laserprinter", "USB")
 print(printer)
 printer.disconnect()
 print(printer)
 
-princsi = Printer("lazi", "USB", 1000)
+princsi = Printer("princsi", "USB", 1000)
 print(princsi)
+princsi.print(2)
+princsi.disconnect()
+princsi.print(100)
