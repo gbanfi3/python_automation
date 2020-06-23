@@ -4,20 +4,23 @@ print(szorzas(2,3))
 aa = (lambda a,b: a*b)(3,4)
 print(aa)
 
-#list comprehension
+# itt a külső függvény
 def doub(a):
     return 2*a
 
+#list comprehension + külső függvény
 sequence = [1,2,3,4,5]
 doubled = [doub(x) for x in sequence]
 print(doubled)
 
-# még jobb
+# map +  külső függvény
 doubled2 = list(map(doub,sequence))
 print(doubled2)
 
-# újabb
-
+# list comprehension + lambda
 doubled = [(lambda x: 2*x)(x) for x in sequence]
 print(doubled)
 
+# map + lambda
+doubled = map(lambda x: 2*x, sequence)
+print(doubled)
