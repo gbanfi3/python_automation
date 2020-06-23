@@ -1,0 +1,1 @@
+raise ZeroDivisionError("nem ok ez így")
