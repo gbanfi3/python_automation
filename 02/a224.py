@@ -4,7 +4,8 @@ class Person:
         self.age = age
 
     def __str__(self):
-        return "Hello, én vagyok " + self.name + ", és " + age + " éves vagyok."
+        aa= f"Hello, én vagyok {self.name} és {self.age} éves vagyok."
+        return aa
 
 bob = Person("bob", 19)
 print(bob)
