@@ -11,16 +11,20 @@ class Device:
         self.connected = False
         print("disconnected")
 
-class Printer:
+class Printer(Device):
     def __init__(self, name, connected_by, capacity):
         super().__init__(name, connected_by)
         self.capacity = capacity
-        remaining_pages = capacity
+        self.remaining_pages = capacity
 
     def __str__(self):
-        return f"printer vagyok, nevem {self.name}, conn {self.connected_by}, capacity {self.capacity}"
+        return f"{super().__str__()}, remaining pages = {self.remaining_pages}"
+        # return f"printer vagyok, nevem {self.name}, conn {self.connected_by}, capacity {self.capacity}"
 
 printer = Device("laserprinter", "USB")
 print(printer)
 printer.disconnect()
 print(printer)
+
+princsi = Printer("lazi", "USB", 1000)
+print(princsi)
