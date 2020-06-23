@@ -11,3 +11,5 @@ class Person:
 
 bob = Person("bob", 19)
 print(bob)
+print(bob.__str__())
+print(bob.__repr__())
