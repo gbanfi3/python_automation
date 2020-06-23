@@ -11,11 +11,11 @@ class Book:
 
     @classmethod
     def hardcover(cls, name, weight):
-        return Book(name, Book.TYPES[0], weight + 100)
+        return cls(name, cls.TYPES[0], weight + 100)
 
     @classmethod
     def paperback(cls, name, weight):
-        return Book(name, Book.TYPES[1], weight)
+        return cls(name, cls.TYPES[1], weight)
 
 konyv1 = Book('aa', "hardcover", 222)
 konyv2 = Book('bb', "paperback", 333)
@@ -28,3 +28,4 @@ konyv3 = Book.hardcover("kemény", 444)
 print(konyv3)
 
 konyv4 = Book.paperback("papír", 555)
+print(konyv4)
