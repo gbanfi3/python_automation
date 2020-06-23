@@ -4,8 +4,10 @@ class Person:
         self.age = age
 
     def __str__(self):
-        aa= f"Hello, én vagyok {self.name} és {self.age} éves vagyok."
-        return aa
+        return f"Hello, én vagyok {self.name} és {self.age} éves vagyok."
+
+    def __repr__(self):
+        return f"<Person({self.name}, {self.age})>"
 
 bob = Person("bob", 19)
 print(bob)
