@@ -7,7 +7,7 @@ for i in users:
 user_mapping = { u[1]: u for u in users}
 print(user_mapping)
 
-input_username = input("mi a neved?: ")
+input_username = input("mi a neved ?: ")
 if not input_username in user_mapping.keys():
     print("nincs ilyen user")
     sys.exit(1)
