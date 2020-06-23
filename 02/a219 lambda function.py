@@ -17,10 +17,12 @@ print(doubled)
 doubled2 = list(map(doub,sequence))
 print(doubled2)
 
-# list comprehension + lambda
+# list comprehension + lambda, nincs sok értelme, inkább simán a számítás kell
+# list comprehension-ba maga az érték kell
 doubled = [(lambda x: 2*x)(x) for x in sequence]
 print(doubled)
 
 # map + lambda
-doubled = map(lambda x: 2*x, sequence)
+# map-be függvény (maga a számítás nem jó), ezért kell lambda vagy egy külső függvény
+doubled = list(map(lambda x: 2*x, sequence))
 print(doubled)
